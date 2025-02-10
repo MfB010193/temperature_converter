@@ -9,17 +9,7 @@ parser = argparse.ArgumentParser(description="Temperature Converter")
 parser.add_argument("temperature_value", type=float, help="Enter the temperature value")
 
 temperature_units = ["Celsius", "Fahrenheit", "Kelvin"]
-
-print("Please select your input temperature scale:")
-for index, unit in enumerate(temperature_units, start=1):
-    print(f"{unit} --> {index}")
-
 parser.add_argument("input_temperature", type=int, choices=[1, 2, 3], help="Select the input temperature scale (1: Celsius, 2: Fahrenheit, 3: Kelvin)")
-
-print("\nPlease select your output temperature scale:")
-for index, unit in enumerate(temperature_units, start=1):
-    print(f"{unit} --> {index}")
-
 parser.add_argument("output_temperature", type=int, choices=[1, 2, 3], help="Select the output temperature scale (1: Celsius, 2: Fahrenheit, 3: Kelvin)")
 
 args = parser.parse_args()
